@@ -1,0 +1,238 @@
+/* Основные цвета */
+:root {
+    --primary-text: #333; /* Темно-серый цвет для основного текста */
+    --secondary-text: #666; /* Светло-серый цвет для второстепенного текста */
+    --accent-color: #D35400; /* Акцентный цвет, используемый для заголовков и ссылок */
+    --background-color: #FFF; /* Белый цвет фона */
+    --quote-text: #777; /* Цвет для цитат */
+}
+
+/* Сброс стилей для элементов */
+body, h1, h2, h3, p, blockquote, ul, li, a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+
+/* Общие стили */
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: var(--primary-text);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+/* Стили для заголовков и текста */
+h1, h2, h3 {
+    color: var(--accent-color);
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 3em; /* Большой заголовок */
+}
+
+h2 {
+    font-size: 2.5em; /* Средний заголовок */
+}
+
+h3 {
+    font-size: 2em; /* Меньший заголовок */
+}
+
+p {
+    color: var(--primary-text);
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+/* Стили для ссылок */
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Стили для цитат */
+blockquote {
+    color: var(--quote-text);
+    font-style: italic;
+    margin: 1em 0;
+}
+
+/* Стили для нумерованных элементов */
+ol {
+    list-style-position: inside;
+    margin-left: 0;
+}
+
+ol li {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+/* Стили для футера */
+footer {
+    color: var(--secondary-text);
+    background-color: var(--background-color);
+    padding: 1em 0;
+    text-align: center;
+}
+
+/* Стили для сетки и размещения контента */
+.container {
+    max-width: 1200px;
+    margin: 0 auto; /* Центрирование контейнера */
+    padding: 0 20px; /* Отступы внутри контейнера */
+}
+
+/* Стили для навигационного меню */
+nav {
+    background: #fff; /* Белый фон для навигационного меню */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Тень для навигационного меню */
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    overflow: hidden; /* Обеспечивает, что элементы списка не выходят за пределы nav */
+}
+
+nav li {
+    float: left; /* Расположение элементов меню в ряд */
+}
+
+nav a {
+    display: block;
+    padding: 15px 20px;
+    text-transform: uppercase; /* Все буквы заглавные */
+    font-weight: bold;
+}
+
+/* Стили для главного заголовка */
+h1 {
+    font-size: 4rem; /* Размер шрифта для h1 */
+    text-transform: uppercase; /* Все буквы заглавные */
+    margin-bottom: 2rem; /* Отступ снизу */
+}
+
+/* Стили для подзаголовков и текстовых блоков */
+h2, h3, p {
+    max-width: 800px; /* Максимальная ширина текста для удобочитаемости */
+    margin-bottom: 1rem; /* Отступ снизу для каждого элемента */
+}
+
+/* Стили для особенностей (features) с цифрами */
+.feature-number {
+    display: inline-block;
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+.feature-text {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 700px;
+}
+
+/* Стили для цитат */
+blockquote {
+    font-size: 1.5rem;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+/* Дополнительные стили для адаптивности */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    nav ul {
+        text-align: center;
+    }
+
+    nav li {
+        float: none;
+    }
+
+    .feature-number {
+        display: block;
+        margin: auto;
+    }
+
+    .feature-text {
+        display: block;
+        margin-top: 1rem;
+    }
+}
+
+img.portfolio-image  {
+    width: 250px;
+    border: 1px solid #b4c1c4;
+    padding: 1px;
+    border-radius: 5px;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Общие стили для блока статьи */
+.blog-post {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd; /* Легкая рамка вокруг статьи */
+    border-radius: 5px; /* Скругление углов */
+}
+
+/* Заголовок статьи */
+.blog-post h3 {
+    margin-top: 0;
+}
+
+/* Краткое и полное содержание статьи */
+.post-content-short, .post-content-full {
+    margin: 20px 0;
+}
+
+.post-content-full p {
+    margin-bottom: 16px; /* Или любое другое значение, которое вам нравится */
+}
+
+.hide-text {
+    display: none;
+}
+
+/* Кнопка для сворачивания/разворачивания */
+.blog-post button {
+    background-color: rgb(219, 169, 95); /* цвет фона */
+    color: white; /* Белый цвет текста */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Стиль кнопки при наведении */
+.blog-post button:hover {
+    background-color: rgb(161, 123, 66); /* Чуть темнее */
+}
+
+.blog-post button:focus {
+    background-color: #d3a76f; /* Светлее или темнее для контраста */
+    outline: none; /* Убираем стандартный outline, если задаем собственный стиль */
+}
