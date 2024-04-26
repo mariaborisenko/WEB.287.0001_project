@@ -1,0 +1,471 @@
+/* Основные цвета */
+:root {
+    --primary-text: #333;
+    --secondary-text: #666;
+    --accent-color: #D35400;
+    --background-color: #FFF;
+    --quote-text: #777;
+}
+
+/* Сброс стилей для элементов */
+body, h1, h2, h3, p, blockquote, ul, li, a {
+    margin:30;
+    padding: 50;
+    border: 20;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+
+/* Общие стили */
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: var(--primary-text);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+/* Стили для заголовков и текста */
+h1, h2, h3 {
+    color: var(--accent-color);
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+p {
+    color: var(--primary-text);
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+/* Стили для ссылок */
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Стили для цитат */
+blockquote {
+    color: var(--quote-text);
+    font-style: italic;
+    margin: 1em 0;
+}
+
+/* Стили для нумерованных элементов */
+ol {
+    list-style-position: inside;
+    margin-left: 0;
+}
+
+ol li {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+/* Стили для футера */
+footer {
+    color: var(--secondary-text);
+    background-color: var(--background-color);
+    padding: 1em 0;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Стили для сетки и размещения контента */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Стили для навигационного меню */
+nav {
+    background: #fff; /* Белый фон для навигационного меню */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Тень для навигационного меню */
+}
+
+nav ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 0 5px; /* Добавим небольшой отступ между элементами списка */
+}
+
+nav a {
+    display: block;
+    padding: 15px 20px;
+    text-transform: uppercase; /* Все буквы заглавные */
+    font-weight: bold;
+    color: var(--primary-text); /* Изменим цвет текста для лучшей читабельности */
+}
+
+/* Стили для главного заголовка */
+h1 {
+    font-size: 4rem; /* Размер шрифта для h1 */
+    text-transform: uppercase; /* Все буквы заглавные */
+    margin-bottom: 2rem; /* Отступ снизу */
+}
+
+/* Стили для подзаголовков и текстовых блоков */
+h2, h3, p {
+    max-width: 800px; /* Максимальная ширина текста для удобочитаемости */
+    margin-bottom: 1rem; /* Отступ снизу для каждого элемента */
+}
+
+/* Стили для изображений портфолио */
+img.portfolio-image {
+    width: 100%;
+    max-width: 250px; /* Ограничим максимальную ширину изображений */
+    border: 1px solid #b4c1c4;
+    padding: 1px;
+    border-radius: 5px;
+    margin-bottom: 1em; /* Добавим отступ снизу для разделения текста и изображения */
+}
+
+/* Дополнительные стили для адаптивности */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem; /* Уменьшим размер заголовка на маленьких устройствах */
+    }
+
+    .container {
+        padding: 0 10px; /* Уменьшим отступы внутри контейнера */
+    }
+
+    nav ul {
+        flex-direction: column; /* Элементы меню станут вертикальными на малых экранах */
+    }
+
+    nav li {
+        width: 100%; /* Каждый элемент списка займет всю доступную ширину */
+    }
+}
+
+/* Стили для более крупных экранов */
+@media (min-width: 1920px) {
+    .container {
+        padding: 0 40px; /* Увеличим отступы внутри контейнера на больших экранах */
+    }
+}
+
+/* Стили для гамбургер-меню */
+.nav-button {
+    display: none; /* Скрываем кнопку на десктопных версиях */
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 3;
+    cursor: pointer;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30px; /* Высота гамбургер-меню */
+}
+
+.nav-button div {
+    width: 35px;
+    height: 5px;
+    background-color: var(--primary-text);
+    border-radius: 5px;
+    transition: all 0.3s linear;
+}
+
+/* Переключение гамбургер-меню и крестика */
+.nav-button.toggle .bar1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.nav-button.toggle .bar2 {
+    opacity: 0;
+}
+
+.nav-button.toggle .bar3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media (max-width: 768px) {
+    .nav-button {
+        display: flex; /* Показываем кнопку на мобильных версиях */
+    }
+
+    /* Скрываем основное меню и показываем, когда нажата кнопка гамбургер-меню */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: var(--background-color);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+
+    nav li {
+        text-align: center;
+        padding: 10px;
+    }
+
+    nav a {
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+form {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+form label,
+form input,
+form textarea,
+form button {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px; /* Отступы между полями формы */
+    border: 1px solid #ccc; /* Границы полей формы */
+    border-radius: 5px; /* Скругление углов полей формы */
+}
+
+form input[type="submit"],
+form button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover,
+form button:hover {
+    background-color: darken(var(--accent-color), 10%);
+}
+
+/* Стили для кнопок */
+button {
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: darken(var(--accent-color), 10%);
+}
+
+/* Стили для блога */
+.blog-post {
+    margin-bottom: 2em;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.blog-post h3 {
+    margin-bottom: 0.5em;
+}
+
+.post-content-short,
+.post-content-full {
+    margin-bottom: 1em;
+}
+
+/* Стили для адаптивности блога */
+@media (max-width: 768px) {
+    .blog-post {
+        padding: 0.5em;
+    }
+
+    .blog-post h3 {
+        font-size: 1.5em;
+    }
+
+    .post-content-short,
+    .post-content-full {
+        padding: 0 10px;
+    }
+}
+
+.service-card {
+    background-color: #f9f9f9;
+    border: 1px solid #e1e1e1;
+    padding: 20px;
+    margin-bottom: 20px; /* Отступ между карточками */
+    border-radius: 5px;
+}
+
+.service-card h3 {
+    margin-top: 0;
+    color: var(--accent-color);
+}
+
+/* Стили для карточек проектов в портфолио */
+.project {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px; /* Отступ от изображения до текста */
+}
+
+/* Адаптация карточек услуг и проектов портфолио */
+@media (max-width: 768px) {
+    .service-card,
+    .project {
+        padding: 10px;
+    }
+}
+
+/* Стили для адаптивности всех секций */
+.section {
+    margin-bottom: 2em;
+}
+
+@media (max-width: 768px) {
+    .section h2 {
+        font-size: 2em;
+    }
+
+    .section p,
+    .section li {
+        font-size: 0.9em;
+    }
+}
+
+/* Стили для социальных иконок в футере */
+.social-links {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.social-links li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+.social-links a {
+    display: inline-block;
+    color: var(--primary-text);
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Стили для подписки на новостную рассылку */
+.subscribe-form {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+}
+
+.subscribe-form h3 {
+    margin-bottom: 15px;
+}
+
+.subscribe-form form input[type="email"] {
+    margin-bottom: 0; /* Убрать отступ снизу для поля ввода, чтобы кнопка была вровень */
+}
+
+.subscribe-form form button {
+    margin-top: 10px;
+}
+
+/* Дополнительные адаптивные стили для футера */
+@media (max-width: 768px) {
+    .footer .container {
+        padding: 10px;
+    }
+
+    .social-links li {
+        margin-right: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+/* Адаптация формы подписки для мобильных устройств */
+@media (max-width: 768px) {
+    .subscribe-form form {
+        display: block;
+    }
+
+    .subscribe-form form input[type="email"],
+    .subscribe-form form button {
+        width: auto;
+        display: inline-block;
+    }
+}
+
+/* Общие адаптивные улучшения */
+@media (max-width: 768px) {
+    /* Уменьшаем отступы для всего контента */
+    .container {
+        padding: 0 10px;
+    }
+
+    /* Уменьшаем размер шрифта для заголовков */
+    h1, h2, h3 {
+        font-size: 1.5em;
+    }
+
+    /* Уменьшаем размер шрифта для текста, чтобы улучшить читаемость */
+    p, li, a {
+        font-size: 0.9em;
+    }
+
+    /* Адаптируем размеры кнопок для более удобного нажатия */
+    button, .subscribe-form form button, form input[type="submit"] {
+        padding: 10px;
+        font-size: 1em;
+    }
+}

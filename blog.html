@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="web-designer portfolio,web-designer Raleigh, graphic designer portfolio, graphic designer Raleigh ">
+    <meta name="description" content="Here you will find the portfolio of an aspiring designer living in North Carolina, Cary"> 
+    <title>Maria Risen - BLOG</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <h1>
+            BLOG
+        </h1>
+        <!-- Введение в блог -->
+        <section id="blog-intro">
+            <h2>Design Insights and Stories</h2>
+            <p>Welcome to my blog! Here you'll find articles on design, industry trends, and case studies from my own experience.</p>
+            <p>You can also read my articles <a href="https://mariarisen.wordpress.com" target="_blank">here</a>.</p>
+        </section>
+
+        <!-- Статья 1 -->
+        <article class="blog-post">
+            <h3>First meeting with the client</h3>
+            <div class="post-content-short">Here's how it goes: a new client comes with a request. For instance, they need a stylish design for social media. The urgency of the task adds a sharp edge, and they're ready to pay for the project right away. What's my move?...</div>
+            <button class="read-more" onclick="toggleFullPost(this)">Read more</button>
+            <div class="post-content-full" style="display:none">
+                <p>
+                    Here's how it goes: a new client comes with a request. For instance, they need a stylish design for social media. The urgency of the task adds a sharp edge, and they're ready to pay for the project right away. What's my move?
+                </p>
+
+                <p>
+                    I'll start by showcasing my portfolio, where the client can gauge my expertise, my sense of style in graphic design, and my talent for creating visual content. This will help them determine if my work meets their expectations. Next, I'll propose a detailed discussion of the project with payment broken down into stages, to ensure mutual trust and comfort. 
+                </p>
+
+                <p>
+                    The first meeting with a client is like a first date: it's both important and exciting. How can you ensure the order will be yours? What points are crucial to discuss to ensure the process runs smoothly? The answers depend on a myriad of factors, including the uniqueness of the project and your personal and professional nuances.
+                </p>
+                <p>
+                    Here are the main points to discuss with the client: 
+                </p>
+                <p>
+                    Present your best work The client needs to see that you can create not only aesthetically appealing but also functional work. Show examples of epoxy panels, graphic projects, photographs, and content you've created. Make sure your work matches the client's request.
+                </p>
+
+                <p>
+                    Discuss the project details Don't hesitate to ask questions. Clarify all nuances, from the client's business specifics to their target audience and technical specifications — sizes, formats, platforms for publishing.
+                </p>
+
+                <p>
+                    Define the stages of work Explain to the client the process from the initial concept to the final product. Set clear stages and explain that each step is an important part of the project development.
+                </p>
+
+                <p>
+                    Set deadlines Agree on the timelines for each stage with the client. This will help both parties stay informed about the process and allow the client to plan their activities.
+                </p>
+
+                <p>
+                    Document the discussion Record all the agreements and send them to the client for confirmation. This will prevent misunderstandings and help keep everything under control.
+                </p>
+
+                <p>
+                    Remember, the first meeting or conversation with a client sets the tone for the entire collaboration. Be attentive, ask the right questions, and plan each step of the work carefully.
+                </p>
+                <button class="hide-text" onclick="toggleFullPost(this)" style="display:none">Hide text</button>
+            </div>
+        </article>
+
+        <!-- Статья 2 -->
+        <article class="blog-post">
+            <h3>Iterative approach in design. My key to success.</h3>
+            <div class="post-content-short">As an artist and web designer, I often encounter a variety of projects and clients. This approach helps me not only in implementing creative ideas but also in building effective interactions with clients...</div>
+            <button class="read-more" onclick="toggleFullPost(this)">Read more</button>
+            <div class="post-content-full" style="display:none">
+                <p>
+                    So, imagine you’re starting to work with a new client. Each of you has your own expectations. The client needs a high-quality result that will solve his problem, and he relies on your competence and meeting deadlines. You strive to receive an interesting order and, of course, decent payment.It is important to understand that in addition to expectations, both sides also have fears. The client may worry about whether your level matches his project, and you may worry about misunderstandings with the customer and possible problems with payment.
+                </p>
+                <p>
+                    This is where an iterative approach comes to the rescue. Its essence is that work on a project is divided into small stages – iterations. At each of them, you agree on further actions with the customer, which ensures mutual understanding and satisfaction of the expectations of both parties.
+                    The client sees progress and can make comments early on, eliminating the need for major rework at the end. And for the designer, this is a way to ensure that they receive payment for each stage of the work.
+                </p>
+                <p>
+                    By the way, iterative approach and Agile planning are two similar concepts that are often used in project management, including the field of web development and design. Both aim to improve the development process and achieve better results, but Agile is more focused on teamwork, flexibility and continuous customer involvement, while the iterative approach is more focused on incrementally improving the product through repeating work cycles.
+                </p>
+                <p>
+                    The iterative approach is not just a way of organizing work, it is a philosophy of interaction with the client. In my practice, this approach helps not only to achieve high-quality work, but also to establish trusting relationships with clients, which is key in my profession. In the next article, I’ll talk about how to put iterative iteration into practice and how it helps me create unique and memorable designs.
+                </p>
+                <button class="hide-text" onclick="toggleFullPost(this)" style="display:none">Hide text</button>
+            </div>
+        </article>
+
+        <script>
+            function toggleFullPost(button) {
+                const blogPost = button.closest('.blog-post');
+                const fullPost = blogPost.querySelector('.post-content-full');
+                const shortPost = blogPost.querySelector('.post-content-short');
+                const readMoreBtn = blogPost.querySelector('.read-more');
+                const hideTextBtn = blogPost.querySelector('.hide-text');
+                
+                if (fullPost.style.display === 'none') {
+                    fullPost.style.display = 'block';
+                    shortPost.style.display = 'none';
+                    if (readMoreBtn) readMoreBtn.style.display = 'none';
+                    if (hideTextBtn) hideTextBtn.style.display = 'inline-block';
+                } else {
+                    fullPost.style.display = 'none';
+                    shortPost.style.display = 'block';
+                    if (readMoreBtn) readMoreBtn.style.display = 'inline-block';
+                    if (hideTextBtn) hideTextBtn.style.display = 'none';
+                }
+            }
+        </script>
+    </div>
+</main>
+
+<div class="subscribe-form">
+    <h3>Subscribe to the newsletter</h3>
+    <form action="#">
+      <input type="email" name="email" placeholder="Your email">
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+  
+
+<footer>
+    <div class="container">
+        <!-- Ссылки на социальные сети будут здесь -->
+    </div>
+</footer>
+
+</body>
+</html>
